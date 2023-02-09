@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>local storege and session storege</title>
+</head>
+
+<body>
+  <script>
+    //  local storege:browser restart krne pr bhi data nhi jata
+    //  session storege:browser restart krne pr data delete ho jata
+
+
+    //localStorage
+    //getItems()key value pair hota h
+    //setItems()
+    //clear()
+    //removeItems()
+
+
+    localStorage.setItem("name", "jitendra")
+    localStorage.getItem("name", "jitendra")
+    // localStorage.removeItem("name")
+    // localStorage.clear()
+    let arry = [1, 2, 3, 4, 5, 6, 7, 8, 9]
+    localStorage.setItem("phone", [1, 2, 3, 4, 5, 6, 7, 8, 9])
+    //ye arry me add nhi hua ye string me add kr deta h
+    // arry me add krne ke JSON.stringify or JSON.parse ka use krenge
+
+    localStorage.setItem("phone", JSON.stringify(arry))
+    let name = localStorage.setItem("name2", "mahi")
+
+
+
+
+
+
+
+
+
+    // sessionStorage
+
+    // sessionStorage.setItem("name", "jitendra")
+    // sessionStorage.getItem("name", "jitendra")
+    // sessionStorage.setItem("name2", "jitendra")
+    // sessionStorage.getItem("name2", "jitendra")
+    // sessionStorage.removeItem("name2")
+    //sessionstorage.clear()
+    // let ram = ["ritik", "mahi", "shyam", "jitendra"]
+    // let arry1 = sessionStorage.setItem("name3", ["ritik", "mahi", "shyam", "jitendra"])//strig
+    // sessionStorage.setItem("name4", JSON.stringify(ram))
+
+    let ram = ["ritik", "mahi", "shyam", "jitendra"]
+    sessionStorage.setItem("jai",["ritik", "mahi", "shyam", "jitendra"])
+     let ramu=sessionStorage.setItem("jai1",JSON.stringify(ram))
+      JSON.parse(sessionStorage.setItem("jai1",JSON.stringify(ram)))
+    
+
+
+
+
+
+
+
+  </script>
+</body>
+
+</html>
